@@ -1,9 +1,84 @@
-:root {
-  --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+@import "tailwindcss";
+@import 'uniwind';
+/* ─── UniWind theme variants ─────────────────────────────────────
+   Switched at runtime via Uniwind.setTheme('light' | 'dark' | 'adaptive').
+   Variable values match the nativewind config.ts tokens so that the
+   same Tailwind utility classes (bg-primary, text-foreground, etc.)
+   produce identical output regardless of styling engine.                */
+@layer theme {
+  :root {
+    @variant light {
+      /* Quiet Luxury. 70 / 20 / 10 — the ground and the surfaces carry most
+         of any screen, deep blue (#0B527A) is the single action colour, and
+         the brand orange survives only as --accent, spent on prices and the
+         one CTA that must be found before it is read. The ground is a warm
+         off-white and --card is pure white, so a card is a sheet of paper on
+         a desk rather than a grey box on a white page. Keep these in step
+         with src/constants/theme.ts, the same palette for the native style
+         props Tailwind cannot reach. */
+      --primary: 11 82 122;
+      --primary-foreground: 255 255 255;
+      --card: 255 255 255;
+      --secondary: 11 82 122;
+      --secondary-foreground: 255 255 255;
+      --background: 247 247 245;
+      --popover: 255 255 255;
+      --popover-foreground: 16 24 32;
+      --muted: 240 240 238;
+      --muted-foreground: 107 115 120;
+      --destructive: 231 0 11;
+      --foreground: 16 24 32;
+      --border: 231 232 230;
+      --input: 231 232 230;
+      --ring: 11 82 122;
+      --accent: 255 138 0;
+      --accent-foreground: 255 255 255;
+    }
+
+    @variant dark {
+      /* The same palette inverted. Blue lightens to #1279AC here: the deep
+         blue is very nearly the luminance of the dark ground and disappears
+         into it. */
+      --primary: 18 121 172;
+      --primary-foreground: 255 255 255;
+      --card: 23 23 23;
+      --secondary: 18 121 172;
+      --secondary-foreground: 255 255 255;
+      --background: 10 10 10;
+      --popover: 23 23 23;
+      --popover-foreground: 250 250 250;
+      --muted: 38 38 38;
+      --muted-foreground: 161 161 161;
+      --destructive: 255 100 103;
+      --foreground: 250 250 250;
+      --border: 10 10 10;
+      --input: 38 38 38;
+      --accent: 255 138 0;
+      --accent-foreground: 10 10 10;
+      --ring: 18 121 172;
+    }
+  }
+}
+
+/* ─── Tailwind v4 color mappings ─────────────────────────────────
+   Maps the theme CSS variables above to Tailwind color utilities.
+   bg-primary → rgb(var(--primary)), text-foreground → rgb(var(--foreground)), etc. */
+@theme inline {
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-card: rgb(var(--card));
+  --color-secondary: rgb(var(--secondary));
+  --color-secondary-foreground: rgb(var(--secondary-foreground));
+  --color-background: rgb(var(--background));
+  --color-popover: rgb(var(--popover));
+  --color-popover-foreground: rgb(var(--popover-foreground));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-destructive: rgb(var(--destructive));
+  --color-foreground: rgb(var(--foreground));
+  --color-border: rgb(var(--border));
+  --color-input: rgb(var(--input));
+  --color-ring: rgb(var(--ring));
+  --color-accent: rgb(var(--accent));
+  --color-accent-foreground: rgb(var(--accent-foreground));
 }

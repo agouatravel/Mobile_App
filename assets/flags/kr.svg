@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#fff"/>
+  <g transform="rotate(-56.3 450 300)">
+    <path fill="#CD2E3A" d="M330,300 A120,120 0 0,1 570,300 A60,60 0 0,0 450,300 A60,60 0 0,1 330,300 Z"/>
+    <path fill="#0047A0" d="M330,300 A120,120 0 0,0 570,300 A60,60 0 0,1 450,300 A60,60 0 0,0 330,300 Z"/>
+  </g>
+  <g fill="#000" transform="translate(190 130) rotate(-56)">
+    <rect x="-50.0" y="-44.0" width="100" height="20"/>
+    <rect x="-50.0" y="-10.0" width="100" height="20"/>
+    <rect x="-50.0" y="24.0" width="100" height="20"/>
+  </g>
+  <g fill="#000" transform="translate(710 470) rotate(-56)">
+    <rect x="-50.0" y="-44.0" width="38.8" height="20"/>
+    <rect x="11.2" y="-44.0" width="38.8" height="20"/>
+    <rect x="-50.0" y="-10.0" width="38.8" height="20"/>
+    <rect x="11.2" y="-10.0" width="38.8" height="20"/>
+    <rect x="-50.0" y="24.0" width="38.8" height="20"/>
+    <rect x="11.2" y="24.0" width="38.8" height="20"/>
+  </g>
+  <g fill="#000" transform="translate(710 130) rotate(56)">
+    <rect x="-50.0" y="-44.0" width="38.8" height="20"/>
+    <rect x="11.2" y="-44.0" width="38.8" height="20"/>
+    <rect x="-50.0" y="-10.0" width="100" height="20"/>
+    <rect x="-50.0" y="24.0" width="38.8" height="20"/>
+    <rect x="11.2" y="24.0" width="38.8" height="20"/>
+  </g>
+  <g fill="#000" transform="translate(190 470) rotate(56)">
+    <rect x="-50.0" y="-44.0" width="100" height="20"/>
+    <rect x="-50.0" y="-10.0" width="38.8" height="20"/>
+    <rect x="11.2" y="-10.0" width="38.8" height="20"/>
+    <rect x="-50.0" y="24.0" width="100" height="20"/>
+  </g>
+</svg>
